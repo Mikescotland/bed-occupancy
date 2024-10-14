@@ -32,8 +32,8 @@ globals:
   restore_value: yes
   initial_value: '${initial_high_value}'
 substitutions:
-  initial_low_value: "12000"
-  initial_high_value: "90000"
+  initial_low_value: "10000"
+  initial_high_value: "70000"
 binary_sensor:
 - platform: template
   name: Bed Occupied Both (Fast)
