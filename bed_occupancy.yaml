@@ -23,7 +23,7 @@ esphome:
   min_version: 2024.6.0
   name_add_mac_suffix: true
   project:
-    name: PolComp.BedPresenceMk1
+    name: PolComp.BedPresence
     version: "DIY"
   platformio_options:
     board_build.flash_mode: dio # dio flash_mode fixes issue where board bootloops using esp-idf
