@@ -30,7 +30,7 @@ sensor:
   - calibrate_linear:             # scale pulses/minute to 0->100%
       method: least_squares
       datapoints:
-        - 60000 -> 100.0         # 50000Hz (sensor shorted/0ohms)
+        - ${initial_high_value}.0 -> 100.0         # 50000Hz (sensor shorted/0ohms)
         - ${initial_low_value}.0 -> 0.0           # 4600Hz (breakforce/10k)
   
   - clamp:
