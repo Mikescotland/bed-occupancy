@@ -1,5 +1,5 @@
 packages:
-  bed-presence-mk1: !include bed_occupancy.yaml
+  bed-occupancy: !include bed_occupancy.yaml
 
 esphome:
   project:
