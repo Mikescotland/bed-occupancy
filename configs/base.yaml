@@ -24,9 +24,13 @@ globals:
     type: float
     restore_value: yes
     initial_value: '${initial_low_value}'
-    
-substitutions:
+  - id: high_value
+    type: float
+    restore_value: yes
+    initial_value: '${initial_high_value}'
+ substitutions:
   initial_low_value: "12000"
+  initial_high_value: "60000"
 binary_sensor:
 - platform: template
   name: Bed Occupied Both (Fast)
