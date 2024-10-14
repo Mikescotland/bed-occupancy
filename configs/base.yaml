@@ -19,18 +19,18 @@ sensor:
   id: bed_presence_uptime
   name: "Uptime"
 - platform: wifi_signal
-    name: "WiFi Signal"
-    update_interval: 30s
+  name: "WiFi Signal"
+  update_interval: 30s
   
 globals:
-  - id: low_value
-    type: float
-    restore_value: yes
-    initial_value: '${initial_low_value}'
-  - id: high_value
-    type: float
-    restore_value: yes
-    initial_value: '${initial_high_value}'
+- id: low_value
+  type: float
+  restore_value: yes
+  initial_value: '${initial_low_value}'
+- id: high_value
+  type: float
+  restore_value: yes
+  initial_value: '${initial_high_value}'
 substitutions:
   initial_low_value: "12000"
   initial_high_value: "90000"
@@ -64,9 +64,7 @@ binary_sensor:
   device_class: occupancy
   icon: mdi:bunk-bed
   lambda: return id(bed_occupied_left).state || id(bed_occupied_right).state;
-- platform: wifi_signal
-    name: "WiFi Signal"
-    update_interval: 30s
+
 
 
 
