@@ -1,13 +1,13 @@
 packages:
   left_bed_sensor: !include
-    file: sensor.yaml
+    file: sensors.yaml
     vars:
       sensor_name: Left
       sensor_id: left
       sensor_gpio: GPIO4
 
   right_bed_sensor: !include
-    file: sensor.yaml
+    file: sensors.yaml
     vars:
       sensor_name: Right
       sensor_id: right
