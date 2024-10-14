@@ -1,6 +1,3 @@
-
-
-  
 binary_sensor:
 - platform: template
   name: Bed Occupied ${sensor_name} (Fast)
