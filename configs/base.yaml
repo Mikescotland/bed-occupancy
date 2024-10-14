@@ -28,7 +28,7 @@ globals:
     type: float
     restore_value: yes
     initial_value: '${initial_high_value}'
- substitutions:
+substitutions:
   initial_low_value: "12000"
   initial_high_value: "60000"
 binary_sensor:
@@ -61,6 +61,9 @@ binary_sensor:
   device_class: occupancy
   icon: mdi:bunk-bed
   lambda: return id(bed_occupied_left).state || id(bed_occupied_right).state;
+- platform: wifi_signal
+    name: "WiFi Signal"
+    update_interval: 30s
 
 
 
