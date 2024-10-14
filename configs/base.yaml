@@ -18,6 +18,9 @@ sensor:
   type: seconds
   id: bed_presence_uptime
   name: "Uptime"
+- platform: wifi_signal
+    name: "WiFi Signal"
+    update_interval: 30s
   
 globals:
   - id: low_value
