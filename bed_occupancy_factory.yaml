@@ -1,1 +1,26 @@
+packages:
+  bed-presence-mk1: !include bed_occupancy.yaml
 
+esphome:
+  project:
+    name: PolComp Bed Occupancy
+    version: 2024.9.0
+
+# Allow ESPHome Adoption
+dashboard_import:
+  package_import_url: github://mikescotland/bed-occupancy/bed_occupancy.yaml@main
+  import_full_config: true
+
+# Allow provisioning Wi-Fi via serial
+improv_serial:
+
+# Sets up Bluetooth LE to allow the user
+# to provision wifi credentials to the device.
+esp32_improv:
+  authorizer: none
+
+
+
+
+http_request:
+  verify_ssl: true
