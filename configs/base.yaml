@@ -32,7 +32,7 @@ globals:
   restore_value: yes
   initial_value: '${initial_high_value}'
 substitutions:
-  initial_low_value: "10000"
+  initial_low_value: "15000"
   initial_high_value: "70000"
 binary_sensor:
 - platform: template
