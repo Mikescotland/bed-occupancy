@@ -20,9 +20,10 @@ sensor:
   name: "Uptime"
 - platform: wifi_signal
   name: "WiFi Signal"
+  id: wifi_signal_dBm
   update_interval: 30s
 - platform: copy # Reports the WiFi signal strength in %
-  source_id: wifi_signal
+  source_id: wifi_signal_dBm
   name: "WiFi Signal Percent"
   filters:
     - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
