@@ -21,6 +21,14 @@ sensor:
 - platform: wifi_signal
   name: "WiFi Signal"
   update_interval: 30s
+- platform: copy # Reports the WiFi signal strength in %
+  source_id: wifi_signal_db
+  name: "WiFi Signal Percent"
+  filters:
+    - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
+  unit_of_measurement: "Signal %"
+  entity_category: "diagnostic"
+  device_class: ""
   
 globals:
 - id: low_value
