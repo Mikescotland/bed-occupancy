@@ -20,9 +20,9 @@ binary_sensor:
 
 sensor:
 - platform: pulse_counter
-  pin: GPIO4
-  name: Left Pressure
-  id: bed_sensor_left
+  pin: ${sensor_gpio}
+  name: ${sensor_name} Pressure
+  id: bed_sensor_${sensor_id}
   update_interval: 0.5s
   unit_of_measurement: '%'
   icon: mdi:gauge
@@ -40,9 +40,9 @@ sensor:
     - delta: 1                  # only send if sensor changes by +/-1% (eliminate sensor noise)
     - throttle: 60s               # but still update every minute
 - platform: pulse_counter
-  pin: GPIO2
-  name: Right Pressure
-  id: bed_sensor_right
+  pin: ${sensor_gpio}
+  name: ${sensor_name} Pressure
+  id: bed_sensor_${sensor_id}
   update_interval: 0.5s
   unit_of_measurement: '%'
   icon: mdi:gauge
