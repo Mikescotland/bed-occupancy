@@ -1,17 +1,17 @@
 packages:
   left_bed_sensor: !include
     file: sensors.yaml
-    vars:
-      sensor_name: Left
-      sensor_id: left
-      sensor_gpio: GPIO4
+    #vars:
+      #sensor_name: Left
+      #sensor_id: left
+      #sensor_gpio: GPIO4
 
   right_bed_sensor: !include
     file: sensors.yaml
-    vars:
-      sensor_name: Right
-      sensor_id: right
-      sensor_gpio: GPIO2
+    #vars:
+      #sensor_name: Right
+      #sensor_id: right
+      #sensor_gpio: GPIO2
 
 sensor:
 - platform: uptime
