@@ -15,7 +15,7 @@ binary_sensor:
   device_class: occupancy
   icon: mdi:bed
   filters:
-  - delayed_on_off: 2s                # ensure stability
+  - delayed_on_off: 4s                # ensure stability
   lambda: return id(bed_sensor_${sensor_id}).state > id(val_trigger_${sensor_id}).state;
 
 sensor:
