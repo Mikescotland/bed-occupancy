@@ -1,7 +1,3 @@
-packages:
-!include
-    file: sensors.yaml
-   
 
 sensor:
 - platform: uptime
